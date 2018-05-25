@@ -30,7 +30,17 @@ Here is a list of the different tasks that were assigned to each developer.
 
 # Wireframe Mockups
 ---
+Xotix Homepage
+![alt text](https://i.imgur.com/TOBTJi3.jpg)
 
+Xotix Sign Up
+![alt text](https://i.imgur.com/5fSTbc7.jpg)
+
+Xotix Buyer Dashboard
+![alt text](https://i.imgur.com/msfOoT7.jpg)
+
+Xotix Seller Dashboard
+![alt text](https://i.imgur.com/boU3BDB.jpg)
 
 # User MVP Stories - Buyers and Sellers
 ---
