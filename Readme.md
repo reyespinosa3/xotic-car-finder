@@ -26,7 +26,7 @@ Here is a list of the different tasks that were assigned to each developer.
 
 # Entity Relationships
 ---
-![alt text]('https://i.imgur.com/mBinMIL.png')
+![alt text](https://i.imgur.com/mBinMIL.png)
 
 # Wireframe Mockups
 ---
