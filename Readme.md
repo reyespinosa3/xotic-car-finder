@@ -26,7 +26,7 @@ Here is a list of the different tasks that were assigned to each developer.
 
 # Entity Relationships
 ---
-![alt text]('/main_app/staticfiles/images/xotix_ERD.png')
+![alt text]('https://i.imgur.com/mBinMIL.png')
 
 # Wireframe Mockups
 ---
@@ -43,3 +43,8 @@ A Seller Should be able to:
 * Enter criteria for a car they are selling
 * View a dashboard that shows all cars they are selling
 * Click a button to view all inventory of cars available
+
+# Stretch Goals
+* Add ability for Buyer to look for multiple cars
+* Add ability for Seller to add multiple cars
+* Add ability for Buyer and Seller use chat feature on the site
