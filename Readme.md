@@ -18,7 +18,11 @@ To run it locally:
 * Clone this repository
 * ```pip install```
 * ```python3 manage.py runserver```
-* Open your browswer to ```localhost:8000```
+* Open your browser to ```localhost:8000```
+
+# Project Assignments
+Here is a list of the different tasks that were assigned to each developer.
+[Trello Board](https://trello.com/b/pRvGnotE/xotix-car-finder)
 
 # Entity Relationships
 ---
@@ -26,3 +30,16 @@ To run it locally:
 
 # Wireframe Mockups
 ---
+
+
+# User MVP Stories - Buyers and Sellers
+---
+A Buyer should be able to:
+* Enter criteria for a car they are interested in buying
+* View a dashboard that shows cars that match their criteria
+* Click a button to view all inventory of cars available
+
+A Seller Should be able to:
+* Enter criteria for a car they are selling
+* View a dashboard that shows all cars they are selling
+* Click a button to view all inventory of cars available
