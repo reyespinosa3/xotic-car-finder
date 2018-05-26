@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Xotix</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+  </head>
+  <body class='form'>
+    <h1> Xotix Car Finder</h1>
+
+{% block content %}
+    <h3> Make: {{ car.make }}</h3>
+    <h3> Model: {{ car.model }}</h3>
+    <h3> Image: {{ car.image }}</h3>
+    <p> Mileage: {{ car.mileage }}</p>
+    <p> Year: {{ car.age }}</p>
+    <p> Price: {{ car.price }}</p>
+    <p> Zip code: {{ car.zipcode }}</p>
+
+      <a href="/">Back</a>
+{% endblock %}
+
+  </body>
+</html>
