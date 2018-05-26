@@ -11,7 +11,36 @@
   <body>
     <h1>Xotix Car Finder</h1>
 
+    {% block content %}
+      {% for car in cars %}
+      <a href="/{{car.id}}">
+        <p>Name: {{ car.name }}</p>
+      {% if cat.age > 0 %}
+        <p>Email: {{ car.age }}</p>
+      {% else %}
+        <p>Image: Kitten</p>
+      {% endif %}
+      </a>
+    	<hr />
+    {% endfor %}
+
+    <form action="post_url/" method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="Submit" />
+      </form>
+
+    {% endblock %}
+
+    <form action="post_url/" method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="Submit" />
+      </form>
+
   <hr />
+
+
 
   <footer>All Rights Reserved, Xotix 2018</footer>
 
