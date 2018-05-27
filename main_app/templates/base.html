@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Xotix</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  </head>
+  <body>
+		<h1>Xotix Car Finder</h1>
+	<hr />
+
+		{% block content %}
+		{% endblock %}
+
+  	  <footer>
+        All Rights Reserved, Xotix 2018
+      </footer>
+
+  </body>
+</html>
