@@ -10,6 +10,25 @@
   <body>
   <h1>Xotic Car Finder</h1>
   <hr />
+
+    <form action="post_url/" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit" />
+    </form>
+    <hr />
+    
+  {% for car in cars %}
+  <a href="/{{car.id}}">
+    <p>Make: {{ car.make }}</p>
+    <p>Model: {{ car.model }}</p>
+    <p>Year: {{ car.year }}</p>
+    <p>Miles: {{ car.miles }}</p>
+    <p>Price: {{ car.price }}</p>
+  </a>
+    <hr />
+  {% endfor %}
+
   <footer>All Rights Reserved, Xotix 2018</footer>
 
   <script src='{% static 'app.js' %}'></script>

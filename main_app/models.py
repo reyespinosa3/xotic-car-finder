@@ -2,14 +2,16 @@ from django.db import models
 
 # Create your models here.
 
-class Buyer(models.Model):
+class Car(models.Model):
     make = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
-    year = models.CharField(max_length=250)
-
-class Seller(models.Model):
-    make = models.CharField(max_length=100)
-    model = models.CharField(max_length=100)
-    year = models.CharField(max_length=250)
+    year = models.IntegerField()
     miles = models.IntegerField()
-    price = models.FloatField(null=True, blank=True, default=None)
+    price = models.IntegerField()
+    def __str__(self):
+        return self.make
+
+# class Buyer(models.Model):
+#     make = models.CharField(max_length=100)
+#     model = models.CharField(max_length=100)
+#     year = models.CharField(max_length=250)
