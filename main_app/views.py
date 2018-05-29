@@ -37,8 +37,24 @@ def profile(request, username):
 	return render(request, 'profile.html', {'username': username, 'cars': cars})
 
 
-# Signup page view
-def signup_view(request):
+# Signup as Buyer page view
+def buyersignup_view(request):
+	if request.method == 'POST':
+		form = UserCreationForm(request.POST)
+		if form.is_valid():
+			form.save()
+			u = form.cleaned_data['username']
+			p = form.cleaned_data['password']
+			user = authenticate(username = u, password = p)
+			user.groups.add(Group.objects.get(name='buyer'))
+			login(request, user)
+			return HttpResponseRedirect('/')
+	else:
+		form = UserCreationForm()
+	return render(request, 'buyersignup.html', {'form': form})
+
+# Signup as Seller page view
+def sellersignup_view(request):
 	if request.method == 'POST':
 		form = UserCreationForm(request.POST)
 		if form.is_valid():
@@ -50,7 +66,8 @@ def signup_view(request):
 			return HttpResponseRedirect('/')
 	else:
 		form = UserCreationForm()
-	return render(request, 'signup.html', {'form': form})
+	return render(request, 'sellersignup.html', {'form': form})
+
 
 # Login page view
 def login_view(request):
