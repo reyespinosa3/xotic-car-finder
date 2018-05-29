@@ -1,40 +1,29 @@
+
 {% extends 'base.html' %}
 {% load staticfiles %}
 
 
 {% block content %}
 
-    {% block content %}
-      {% for car in cars %}
-      <a href="/{{car.id}}">
-        <p>Name: {{ car.name }}</p>
-      {% if cat.age > 0 %}
-        <p>Email: {{ car.age }}</p>
-      {% else %}
-        <p>Image: Kitten</p>
-      {% endif %}
-      </a>
-    	<hr />
-    {% endfor %}
-
     <form action="post_url/" method="post">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <input type="submit" value="Submit" />
-      </form>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit" />
+    </form>
+    <hr />
 
-    {% endblock %}
-
-    <form action="post_url/" method="post">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <input type="submit" value="Submit" />
-      </form>
-
-  <hr />
-
-
-
-  <footer>All Rights Reserved, Xotix 2018</footer>
+  {% for car in cars %}
+  <a href="/{{car.id}}">
+    <p>Make: {{ car.make }}</p>
+    <p>Model: {{ car.model }}</p>
+    <p>Year: {{ car.year }}</p>
+    <p>Miles: {{ car.miles }}</p>
+    <p>Price: {{ car.price }}</p>
+  </a>
+  <a href="/user/{{car.user.username}}"
+      <p>Car Entered By: {{car.user.username }}</p>
+    </a>
+    <hr />
+  {% endfor %}
 
 {% endblock %}
