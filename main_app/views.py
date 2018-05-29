@@ -65,7 +65,7 @@ def login_view(request):
                 if user.is_active:
                     login(request, user)
                     print("user is active")
-                    return HttpResponseRedirect('/')
+                    return render(request, 'profile.html')
                 else:
                     print("The account has been disabled.")
                 return HttpResponse('/')
