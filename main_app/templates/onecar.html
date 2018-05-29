@@ -4,13 +4,14 @@
   <head>
     <title>Xotix Car Finder</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'cars.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
 
   </head>
   <body>
     <h1>Xotix Car Finder</h1>
-    <a href="/user/{{car.user.username}}">Profile</a>
-    <a href="/">Home</a>
+    <a class="btn btn-primary" href="/user/{{car.user.username}}" role="button">Profile</a>
+    <a class="btn btn-primary" href="/" role="button">Home</a>
     <hr />
     <h2> Make: {{ car.make }}</h1>
     <p> Model: {{ car.model }}</p>
@@ -26,7 +27,7 @@
       <p>Miles: {{ car.miles }}</p>
       <p>Price: {{ car.price }}</p>
     </a>
-    <a href="/user/{{car.user.username}}"
+    <a href="/user/{{car.user.username}}" 
         <p>Car Entered By: {{car.user.username }}</p>
       </a>
       <hr />
