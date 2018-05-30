@@ -1,39 +1,23 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Xotix</title>
 
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
 
-  </head>
-  <body class='form'>
-    <h1> Xotix Car Finder</h1>
 
 {% block content %}
-    <h3> Make: {{ car.make }}</h3>
-    <h3> Model: {{ car.model }}</h3>
-    <h3> Image: {{ car.image }}</h3>
-    <p> Mileage: {{ car.mileage }}</p>
-    <p> Year: {{ car.age }}</p>
-    <p> Price: {{ car.price }}</p>
-    <p> Zip code: {{ car.zipcode }}</p>
 
-      <a href="/">Back</a>
+    {% for car in cars %}
 
-      <form action="post_url/" method="post">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <input type="submit" value="Submit" />
-      </form>
-      <hr />
-
+    <a href="/{{ car.id }}">
+      <div class='profileCars'>
+        <h3>Make: {{ car.make }}</h3>
+        <h3>Model: {{ car.model }}</h3>
+        <h3>Year: {{ car.year }}</h3>
+        <h3>Miles: {{ car.miles }}</h3>
+        <h3>Price: {{ car.price }}</h3>
+      </div>
+      <img class='uploadedImage' src='{{ car.image.url }}' width='300' height='200'>
+    </a>
+    <hr />
+    {% endfor %}
 
 {% endblock %}
-
-
-
-  </body>
-</html>

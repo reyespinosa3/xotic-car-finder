@@ -16,9 +16,10 @@
     </div>
     <div class='buttons'>
       <a class="btn btn-primary" href="/user/{{car.user.username}}" role="button">Profile</a>
-      <a class="btn btn-primary" href="/post_car" role="button">Sell Car</a>
+      <a class="btn btn-primary" href="/" role="button">Sell Car</a>
     </div>
     <div class='profileCars'>
+
       <h3> Make: {{ car.make }}</h3>
       <h3> Model: {{ car.model }}</h3>
       <h3> Year: {{ car.year }}</h3>
@@ -26,16 +27,14 @@
       <h3> Price: {{ car.price }}</h3>
     </div>
 
-      <img class='uploadedImage' src='{{ car.image.url }}' width='300' height='200'>
+      <img class='uploadedImage' src='{{ car.image.url }}' width='400' height='300'>
         <h2>Car Entered By: {{car.user.username }}</h2>
-
-    {% for car in cars %}
 
     <a href="/user/{{car.user.username}}"
         <p>Car Entered By: {{car.user.username }}</p>
       </a>
       <hr />
-    {% endfor %}
+
 
 
   </body>

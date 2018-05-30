@@ -13,6 +13,10 @@ def index(request):
 	form = CarForm()
 	return render(request, 'index.html', { 'cars':cars, 'form':form })
 
+# Show view
+def show(request):
+	cars = Car.objects.all()
+	return render(request, 'show.html', { 'cars':cars })
 
 # Individual car view
 def onecar(request, car_id):
@@ -37,8 +41,8 @@ def profile(request, username):
 	return render(request, 'profile.html', {'username': username, 'cars': cars})
 
 
-# Signup as Buyer page view
-def buyersignup_view(request):
+# Signup page view
+def signup_view(request):
 	if request.method == 'POST':
 		form = UserCreationForm(request.POST)
 		if form.is_valid():
@@ -46,12 +50,11 @@ def buyersignup_view(request):
 			u = form.cleaned_data['username']
 			p = form.cleaned_data['password']
 			user = authenticate(username = u, password = p)
-			user.groups.add(Group.objects.get(name='buyer'))
 			login(request, user)
-			return HttpResponseRedirect('/')
+			return render(request, 'show.html')
 	else:
 		form = UserCreationForm()
-	return render(request, 'buyersignup.html', {'form': form})
+	return render(request, 'signup.html', {'form': form})
 
 
 # Login page view
@@ -67,10 +70,10 @@ def login_view(request):
                 if user.is_active:
                     login(request, user)
                     print("user is active")
-                    return render(request, 'profile.html')
+                    return HttpResponseRedirect('/show')
                 else:
                     print("The account has been disabled.")
-                return HttpResponse('/')
+                return HttpResponseRedirect('/')
             else:
                 print("The username and/or password is incorrect.")
             return HttpResponseRedirect('/')
