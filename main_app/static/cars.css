@@ -1,8 +1,7 @@
 body {
   text-align: center;
   font-family: 'Nanum Gothic', sans-serif;
-  background-image: url('images/background_leather.png');
-
+  background-image: url("images/background_leather.png");
 }
 
 h1 {
@@ -31,4 +30,16 @@ form {
 
 .backgroundBox {
   height: 500px;
+}
+
+.uploadedImage {
+  position: relative;
+    left: 300px;
+    bottom: 300px;
+}
+
+.profileCars {
+  position: relative;
+    right: 300px;
+    
 }
