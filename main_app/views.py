@@ -27,7 +27,7 @@ def post_car(request):
 		car = form.save(commit = False)
 		car.user = request.user
 		car.save()
-	return HttpResponseRedirect('/')
+	return render(request, 'profile.html', {'username': username, 'cars': cars})
 
 
 # User Profile
@@ -52,21 +52,6 @@ def buyersignup_view(request):
 	else:
 		form = UserCreationForm()
 	return render(request, 'buyersignup.html', {'form': form})
-
-# Signup as Seller page view
-def sellersignup_view(request):
-	if request.method == 'POST':
-		form = UserCreationForm(request.POST)
-		if form.is_valid():
-			form.save()
-			u = form.cleaned_data['username']
-			p = form.cleaned_data['password']
-			user = authenticate(username = u, password = p)
-			login(request, user)
-			return HttpResponseRedirect('/')
-	else:
-		form = UserCreationForm()
-	return render(request, 'sellersignup.html', {'form': form})
 
 
 # Login page view
