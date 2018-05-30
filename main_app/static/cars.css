@@ -1,13 +1,8 @@
 body {
   text-align: center;
   font-family: 'Nanum Gothic', sans-serif;
-<<<<<<< HEAD
-  background-color: ;
-  background-image: url("https://i.imgur.com/KUcAy6n.png");
-=======
-  /* background-color: black; */
-  /* background-image: url('/images/bannercar.jpg'); */
->>>>>>> upstream/master
+  background-image: url('images/background_leather.png');
+
 }
 
 h1 {
