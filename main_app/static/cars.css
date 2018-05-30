@@ -1,8 +1,8 @@
 body {
   text-align: center;
   font-family: 'Nanum Gothic', sans-serif;
-  /* background-color: black; */
-  /* background-image: url('/images/bannercar.jpg'); */
+  background-image: url('images/background_leather.png');
+
 }
 
 h1 {
@@ -27,7 +27,6 @@ form {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
-
 }
 
 .backgroundBox {
