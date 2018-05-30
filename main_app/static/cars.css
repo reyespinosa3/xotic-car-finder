@@ -4,8 +4,8 @@ body {
   background-image: url("images/background_leather.png");
 }
 
-h1 {
-
+hr {
+  margin: -100px 0px 40px 0px;
 }
 
 a {
@@ -36,6 +36,7 @@ form {
 
 .backgroundBox {
   height: 500px;
+  /* margin-top: 100px; */
 }
 
 .uploadedImage {
