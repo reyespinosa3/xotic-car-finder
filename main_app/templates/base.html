@@ -16,16 +16,17 @@
 
       </div>
     </div>
+  <div class='buttons'>
+    {% if user.is_authenticated %}
+      <a class="btn btn-primary" href="{% url 'profile' user.username %}" role="button">Hello, {{ user.username }}!</a>
+      <a class="btn btn-primary" href="{% url 'logout' %}" role="button">Logout</a>
+    {% else %}
+      <a class="btn btn-primary" href="{% url 'login' %}" role="button">Login</a>
+    {% endif %}
 
-  {% if user.is_authenticated %}
-    <a class="btn btn-primary" href="{% url 'profile' user.username %}" role="button">Hello, {{ user.username }}!</a>
-    <a class="btn btn-primary" href="{% url 'logout' %}" role="button">Logout</a>
-  {% else %}
-    <a class="btn btn-primary" href="{% url 'login' %}" role="button">Login</a>
-  {% endif %}
-
-  <a class="btn btn-primary" href="{% url 'buyersignup' %}" role="button">Buyer Signup</a>
-  <a class="btn btn-primary" href="{% url 'sellersignup' %}" role="button">Seller Signup</a>
+    <a class="btn btn-primary" href="{% url 'buyersignup' %}" role="button">Buyer Signup</a>
+    <a class="btn btn-primary" href="{% url 'sellersignup' %}" role="button">Seller Signup</a>
+  </div>
 		{% block content %}
 
 		{% endblock %}
