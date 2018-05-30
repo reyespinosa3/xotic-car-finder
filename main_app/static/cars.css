@@ -1,12 +1,11 @@
 body {
   text-align: center;
   font-family: 'Nanum Gothic', sans-serif;
-  background-image: url('images/background_leather.png');
-
+  background-image: url("images/background_leather.png");
 }
 
 h1 {
-  background-color: green;
+
 }
 
 a {
@@ -18,10 +17,15 @@ form {
   width: 60%;
 }
 
+.buttons {
+  position: relative;
+    bottom: 90px;
+}
+
 .backgroundImage {
   background-color: black;
   background-image: url('images/bannercar.jpg');
-  height: 100%;
+  height: 90%;
   width: 100%;
   padding: 100px;
   background-size: cover;
@@ -31,4 +35,15 @@ form {
 
 .backgroundBox {
   height: 500px;
+}
+
+.uploadedImage {
+  position: relative;
+    left: 300px;
+    bottom: 300px;
+}
+
+.profileCars {
+  position: relative;
+    right: 300px;
 }
