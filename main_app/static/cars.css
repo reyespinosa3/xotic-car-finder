@@ -1,12 +1,49 @@
 body {
   text-align: center;
   font-family: 'Nanum Gothic', sans-serif;
+  background-image: url("images/background_leather.png");
 }
 
 h1 {
-  background-color: green;
+
 }
 
 a {
   text-decoration: none;
+}
+
+form {
+  margin-left: 300px;
+  width: 60%;
+}
+
+.buttons {
+  position: relative;
+    bottom: 90px;
+}
+
+.backgroundImage {
+  background-color: black;
+  background-image: url('images/bannercar.jpg');
+  height: 90%;
+  width: 100%;
+  padding: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.backgroundBox {
+  height: 500px;
+}
+
+.uploadedImage {
+  position: relative;
+    left: 300px;
+    bottom: 300px;
+}
+
+.profileCars {
+  position: relative;
+    right: 300px;
 }
