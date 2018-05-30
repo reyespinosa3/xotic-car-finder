@@ -10,24 +10,28 @@
   </head>
   <body>
     <h1>Xotix Car Finder</h1>
-    <a class="btn btn-primary" href="/user/{{car.user.username}}" role="button">Profile</a>
-    <a class="btn btn-primary" href="/" role="button">Home</a>
-    <hr />
-    <h2> Make: {{ car.make }}</h1>
-    <p> Model: {{ car.model }}</p>
-    <p> Year: {{ car.year }}</p>
-    <p> Miles: {{ car.miles }}</p>
-    <p> Price: {{ car.price }}</p>
+    <div class='backgroundBox'>
+      <div class='backgroundImage'>
+      </div>
+    </div>
+    <div class='buttons'>
+      <a class="btn btn-primary" href="/user/{{car.user.username}}" role="button">Profile</a>
+      <a class="btn btn-primary" href="/post_car" role="button">Sell Car</a>
+    </div>
+    <div class='profileCars'>
+      <h3> Make: {{ car.make }}</h3>
+      <h3> Model: {{ car.model }}</h3>
+      <h3> Year: {{ car.year }}</h3>
+      <h3> Miles: {{ car.miles }}</h3>
+      <h3> Price: {{ car.price }}</h3>
+    </div>
+
+      <img class='uploadedImage' src='{{ car.image.url }}' width='300' height='200'>
+        <h2>Car Entered By: {{car.user.username }}</h2>
 
     {% for car in cars %}
-    <a href="/{{car.id}}">
-      <p>Make: {{ car.make }}</p>
-      <p>Model: {{ car.model }}</p>
-      <p>Year: {{ car.year }}</p>
-      <p>Miles: {{ car.miles }}</p>
-      <p>Price: {{ car.price }}</p>
-    </a>
-    <a href="/user/{{car.user.username}}" 
+
+    <a href="/user/{{car.user.username}}"
         <p>Car Entered By: {{car.user.username }}</p>
       </a>
       <hr />
