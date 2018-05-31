@@ -18,6 +18,17 @@ form {
   width: 60%;
 }
 
+.inputform {
+  position: relative;
+  height: 650px;
+}
+
+.collection {
+  height: 150px;
+  position:relative;
+
+}
+
 .buttons {
   position: relative;
     bottom: 90px;
