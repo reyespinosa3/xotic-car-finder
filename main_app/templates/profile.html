@@ -16,19 +16,19 @@
         <input type="submit" value="Submit" />
     </form>
   </div>
-
+<hr />
   <div postion='relative'>
     {% for car in cars %}
 
-    <a href="/{{ car.id }}">
+    <a class='carLink' href="/{{ car.id }}">
       <div class='profileCars'>
-        <h3>Make: {{ car.make }}</h3>
+        <h3 class='carLink'>Make: {{ car.make }}</h3>
         <h3>Model: {{ car.model }}</h3>
         <h3>Year: {{ car.year }}</h3>
         <h3>Miles: {{ car.miles }}</h3>
         <h3>Price: {{ car.price }}</h3>
       </div>
-      <img class='uploadedImage' src='{{ car.image.url }}' width='300' height='200'>
+      <img class='uploadedImage' src='{{ car.image.url }}' width='500' height='400'>
     </a>
     <hr />
   </div>

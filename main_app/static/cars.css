@@ -21,6 +21,7 @@ form {
 .inputform {
   position: relative;
   height: 650px;
+  margin-bottom: 200px;
 }
 
 .collection {
@@ -59,4 +60,10 @@ form {
 .profileCars {
   position: relative;
     right: 300px;
+  color: black;
+}
+
+.carLink {
+  color: black;
+  text-decoration: none;
 }
