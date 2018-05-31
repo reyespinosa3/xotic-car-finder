@@ -53,8 +53,8 @@ form {
 .collection {
   height: 150px;
   position:relative;
-    top: -90px;
-
+    top: -80px;
+  border: none;
 }
 
 .buttons {
