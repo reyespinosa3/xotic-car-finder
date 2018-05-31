@@ -15,8 +15,14 @@
     </div>
     <div class='buttons'>
       {% if user.is_authenticated %}
+<<<<<<< HEAD
       <a class="btn" href="{% url 'profile' user.username %}" role="button">Hello, {{ user.username }}!</a>
       <a class="btn" href="{% url 'logout' %}" role="button">Logout</a>
+=======
+      <a class="btn btn-primary" href="{% url 'show' %}" role="button">View All Inventory</a>
+      <a class="btn btn-primary" href="{% url 'profile' user.username %}" role="button">{{ user.username }}, Post Your Car For Sale</a>
+      <a class="btn btn-primary" href="{% url 'logout' %}" role="button">Logout</a>
+>>>>>>> upstream/master
       {% else %}
       <a class="btn" href="{% url 'login' %}" role="button">Login</a>
       {% endif %}

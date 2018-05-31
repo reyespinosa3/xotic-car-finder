@@ -5,7 +5,7 @@
 
 {% block content %}
 
-<h1>Click "Hello, {{ username }}" To Sell Your Car</h1>
+<h1>Our Inventory of Cars</h1>
     {% for car in cars %}
 
     <a href="/{{ car.id }}">
@@ -16,7 +16,7 @@
         <h3>Miles: {{ car.miles }}</h3>
         <h3>Price: {{ car.price }}</h3>
       </div>
-      <img class='uploadedImage' src='{{ car.image.url }}' width='300' height='200'>
+      <img class='uploadedImage' src='{{ car.image.url }}' alt='car' width='300' height='200'>
     </a>
     <hr />
     {% endfor %}
