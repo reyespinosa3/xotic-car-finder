@@ -13,7 +13,9 @@
     <form action="post_url/" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Submit" />
+        <div class='inputButton'>
+          <input class="btn btn-primary" type="submit" role="button" value="Submit" />
+        </div>
     </form>
   </div>
 <hr />
