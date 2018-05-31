@@ -10,7 +10,7 @@ from .forms import CarForm, LoginForm
 # Homepage view
 def index(request):
 	cars = Car.objects.all()
-	return render(request, 'index.html', { 'cars':cars})
+	return render(request, 'index.html', { 'cars':cars })
 
 # Show all cars view
 def show(request):
@@ -30,7 +30,8 @@ def post_car(request):
 		car = form.save(commit = False)
 		car.user = request.user
 		car.save()
-	return render(request, 'profile.html', {'username': username, 'cars': cars})
+	return HttpResponseRedirect('/show')
+	# return render(request, 'show.html', { 'username': username, 'cars': cars })
 
 
 # User Profile
@@ -38,7 +39,7 @@ def profile(request, username):
 	user = User.objects.get(username=username)
 	cars = Car.objects.filter(user=user)
 	form = CarForm()
-	return render(request, 'profile.html', {'username': username, 'form':form, 'cars': cars})
+	return render(request, 'profile.html', { 'username': username, 'form':form, 'cars': cars })
 
 
 
