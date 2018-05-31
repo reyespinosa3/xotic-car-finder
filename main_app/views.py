@@ -10,10 +10,9 @@ from .forms import CarForm, LoginForm
 # Homepage view
 def index(request):
 	cars = Car.objects.all()
-	form = CarForm()
-	return render(request, 'index.html', { 'cars':cars, 'form':form })
+	return render(request, 'index.html', { 'cars':cars})
 
-# Show view
+# Show all cars view
 def show(request):
 	cars = Car.objects.all()
 	return render(request, 'show.html', { 'cars':cars })
@@ -38,7 +37,11 @@ def post_car(request):
 def profile(request, username):
 	user = User.objects.get(username=username)
 	cars = Car.objects.filter(user=user)
-	return render(request, 'profile.html', {'username': username, 'cars': cars})
+	form = CarForm()
+	return render(request, 'profile.html', {'username': username, 'form':form, 'cars': cars})
+
+
+
 
 
 # Signup page view
@@ -47,14 +50,14 @@ def signup_view(request):
 		form = UserCreationForm(request.POST)
 		if form.is_valid():
 			form.save()
-			u = form.cleaned_data['username']
-			p = form.cleaned_data['password']
-			user = authenticate(username = u, password = p)
+			username = form.cleaned_data.get('username')
+			raw_password = form.cleaned_data.get('password1')
+			user = authenticate(username=username, password=raw_password)
 			login(request, user)
-			return render(request, 'show.html')
+			return HttpResponseRedirect('/show')
 	else:
 		form = UserCreationForm()
-	return render(request, 'signup.html', {'form': form})
+		return render(request, 'signup.html', {'form': form})
 
 
 # Login page view

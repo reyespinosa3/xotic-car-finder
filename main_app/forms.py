@@ -4,7 +4,7 @@ from .models import Car
 class CarForm(forms.ModelForm):
     class Meta:
         model = Car
-        fields = ['make', 'model', 'year', 'miles', 'price']
+        fields = ['make', 'model', 'year', 'miles', 'price', 'image']
 
 class LoginForm(forms.Form):
     username = forms.CharField(label="User Name", max_length=64)
