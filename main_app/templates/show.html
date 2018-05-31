@@ -5,7 +5,7 @@
 
 {% block content %}
 
-<h1>Click "Hello, (yourname)" To Sell Your Car</h1>
+<h1>Click "Hello, {{ username }}" To Sell Your Car</h1>
     {% for car in cars %}
 
     <a href="/{{ car.id }}">
