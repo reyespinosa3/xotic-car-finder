@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from .models import Car
 from .forms import CarForm, LoginForm
 
@@ -54,6 +54,8 @@ def signup_view(request):
 			raw_password = form.cleaned_data.get('password1')
 			user = authenticate(username=username, password=raw_password)
 			login(request, user)
+			my_group = Group.objects.get(name='seller')
+			my_group.user_set.add(user)
 			return HttpResponseRedirect('/show')
 	else:
 		form = UserCreationForm()
