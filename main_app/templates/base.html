@@ -9,11 +9,13 @@
   </head>
   <body>
 	<h1>Xotix Car Finder</h1>
-    <div class='backgroundBox'>
-      <div class='backgroundImage'>
-      </div>
+  <div class='logo'>
+  </div>
+  <div class='backgroundBox'>
+    <div class='backgroundImage'>
     </div>
-    <div class='buttons'>
+  </div>
+  <div class='buttons'>
       {% if user.is_authenticated %}
       <a class="btn btn-primary" href="{% url 'show' %}" role="button">View All Inventory</a>
       <a class="btn btn-primary" href="{% url 'profile' user.username %}" role="button">{{ user.username }}, Post Your Car For Sale</a>

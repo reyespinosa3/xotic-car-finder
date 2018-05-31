@@ -14,7 +14,8 @@ a {
 }
 
 a.btn {
-  background-color: red;
+  background-color: black;
+  color: white;
 }
 
 a.btn:hover {
@@ -63,17 +64,16 @@ form {
 
 .backgroundImage {
   background-color: black;
-  background-image: url('images/bannercar.jpg');
+  background-image: url('images/xotix_banner.png');
   height: 90%;
   width: 100%;
   padding: 100px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom;
 }
 
 .backgroundBox {
-  height: 500px;
+  height: 400px;
 }
 
 .uploadedImage {
