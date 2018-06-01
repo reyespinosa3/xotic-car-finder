@@ -15,8 +15,8 @@
       </div>
     </div>
     <div class='buttons'>
-      <a class="btn btn-primary" href="/user/{{car.user.username}}" role="button">Profile</a>
-      <a class="btn btn-primary" href="/" role="button">Sell Car</a>
+      <a class="btn btn-primary" href="/show" role="button">View All Inventory</a>
+      <a class="btn btn-primary" href="{% url 'profile' user.username %}" role="button">Sell Car</a>
     </div>
     <div class='profileCars'>
 
@@ -28,11 +28,11 @@
     </div>
 
       <img class='uploadedImage' src='{{ car.image.url }}' width='400' height='300'>
-        <h2>Car Entered By: {{car.user.username }}</h2>
+        <h2>Car Being Sold By: {{car.user.username }}</h2>
 
     <a href="/user/{{car.user.username}}"
       </a>
-  
+
 
 
 

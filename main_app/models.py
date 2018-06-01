@@ -9,7 +9,7 @@ class Car(models.Model):
     year = models.IntegerField()
     miles = models.IntegerField()
     price = models.IntegerField()
-    image = models.ImageField(upload_to='car_image')
+    image = models.ImageField(upload_to='car_image', null=True, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self):
         return self.make

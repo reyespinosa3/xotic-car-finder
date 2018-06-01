@@ -9,7 +9,8 @@
   </div>
 
   <div class='inputform'>
-    <h2>Enter Your Car Details Below</h2>
+    <h2>Here is a list of the cars you have posted for sale</h2>
+    <h2>Complete the form below to post a car for sale</h2>
     <form action="/post_url/" method="post">
         {% csrf_token %}
         {{ form.as_p }}
