@@ -60,7 +60,7 @@ def signup_view(request):
 			return HttpResponseRedirect('/show')
 	else:
 		form = UserCreationForm()
-		return render(request, 'signup.html', {'form': form})
+	return render(request, 'signup.html', {'form': form})
 
 
 # Login page view
