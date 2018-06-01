@@ -3,6 +3,7 @@
 <html>
   <head>
     <title>Xotix Car Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
     <link rel="stylesheet" type="text/css" href="{% static 'cars.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
@@ -27,12 +28,12 @@
       <h3> Price: {{ car.price }}</h3>
     </div>
 
-      <img class='uploadedImage' src='{{ car.image.url }}' width='400' height='300'>
+      <img class='uploadedImage' src='{{ car.image.url }}' width='500' height='400'>
         <h2>Car Entered By: {{car.user.username }}</h2>
 
     <a href="/user/{{car.user.username}}"
       </a>
-  
+
 
 
 

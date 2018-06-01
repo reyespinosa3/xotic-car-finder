@@ -24,7 +24,7 @@ a.btn:hover {
 }
 
 input.btn {
-  background-color: red;
+  background-color: black;
 }
 
 input.btn:hover {
@@ -35,6 +35,12 @@ input.btn:hover {
 form {
   margin-left: 250px;
   width: 60%;
+}
+
+label {
+  font-family: 'Nanum Gothic', sans-serif;
+  color: black;
+  font: 20px;
 }
 
 .inputform {
